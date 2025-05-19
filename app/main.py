@@ -14,9 +14,12 @@ app = FastAPI()
 model = joblib.load('model.joblib')
 boxcox = load_boxcox_transformer()
 
+# Root route to verify service is up
+@app.get("/")
+def read_root():
+    return {"message": "Methanol Yield Prediction API is live!"}
+
 # Define the expected input schema (update with your real features)
-
-
 class YieldFeatures(BaseModel):
     Temperature: float = Field(..., alias="Temperature (K)")
     Pressure_Bar: float = Field(..., alias="Pressure (bar)")

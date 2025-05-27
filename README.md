@@ -51,10 +51,14 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000
 
 ### Docker Setup
 #### Build the Docker Image:
+```bash
 docker build -t methanol-yield-api .
+```
 
 #### Run the Docker Container:
+```bash
 docker run -p 8000:8000 methanol-yield-api
+```
 
 
 ### API Usage
@@ -79,10 +83,11 @@ Output Format (JSON):
 ```
 
 Example Request:
+```bash
 curl -X POST http://localhost:8000/predict \
 -H "Content-Type: application/json" \
 -d '{"Temperature (K)": 523.0, "Pressure (bar)": 100.0, "Residence Time (s)_1": 10.0, "Residence Time (s)_2": 8.0}'
-
+```
 
 ### Deployment
 Render Deployment

@@ -58,22 +58,25 @@ docker run -p 8000:8000 methanol-yield-api
 
 
 ### API Usage
-Endpoint: POST /predict
-Description: Predicts methanol yield based on input conditions.
-Input Format (JSON):
+**Endpoint:** `POST /predict`  
+**Description:** Predicts methanol yield based on input conditions.
+
+**Input Format (JSON):**
+```json
 {
   "Temperature (K)": float,
   "Pressure (bar)": float,
   "Residence Time (s)_1": float,
   "Residence Time (s)_2": float
 }
-
+```
 
 Output Format (JSON):
+```json
 {
   "Predicted Percentage yield": "string"
 }
-
+```
 
 Example Request:
 curl -X POST http://localhost:8000/predict \

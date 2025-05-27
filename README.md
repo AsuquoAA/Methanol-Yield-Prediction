@@ -33,21 +33,24 @@ This project involves the development of a machine learning model to predict met
 
 ### Local Setup
 Clone the Repository:
-- git clone https://github.com/AsuquoAA/Methanol-Yield-Prediction_Backend.git
-- cd Methanol-Yield-Prediction
-
+```bash
+git clone https://github.com/AsuquoAA/Methanol-Yield-Prediction_Backend.git
+cd Methanol-Yield-Prediction
+```
 
 ### Install Dependencies:
+```bash
 pip install -r requirements.txt
-
+```
 
 ### Load the Model:
 Ensure model.joblib and yield_boxcox_transformer.pkl are in the objects/ directory (or adjust paths in the code).
 
 
 ### Run the FastAPI Server:
+```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000
-
+```
 
 ### Docker Setup
 #### Build the Docker Image:
